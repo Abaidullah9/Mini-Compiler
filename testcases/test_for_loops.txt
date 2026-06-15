@@ -1,0 +1,10 @@
+int main() {
+    int sum = 0;
+    int i;
+    // Testing the new For loop and compound assignment
+    for (i = 0; i < 10; i++) {
+        sum += i;
+    }
+    output sum;
+    return 0;
+}

@@ -1,0 +1,6 @@
+int main() {
+    int x = 10
+    x = 20; // Error: Parser should panic, skip to next line, and compile this line
+    int y = 30;; // Error: Extra semicolon
+    return 0;
+}

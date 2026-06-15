@@ -1,0 +1,46 @@
+// Invalid Test: Stress Testing Error Recovery & Semantic Logic
+int x=6;
+x=9.8;
+nt add(int a, int b) {
+    return a + b;
+}
+
+bool badReturn() {
+    return 5; // Semantic Error: Return type mismatch (5 is int, should be bool)
+}
+
+int main() {
+    // 1. Lexical Error
+    int a@; 
+    
+    // 2. Syntax Error
+    float b
+    b = 3.14;
+
+    // 3. Semantic Error (Type mismatch)
+    bool flag;
+    flag = 100;
+
+    // 4. Semantic Error (Undeclared)
+    ghostVar = 50;
+
+    // 5. Semantic Error (Scope)
+    if (true) {
+        int inner = 1;
+    }
+    inner = 2; // Error: Undeclared
+
+    // 6. Function call semantic errors
+    int n = 10;
+    n = add(n);          // Error: wrong argument count (needs 2)
+    n = add(true, n);    // Error: wrong argument type (true is bool, needs int)
+
+    // 7. Unary/Logical misuse
+    flag = !n;           // Error: Logical NOT on int
+
+    // 8. Return type mismatch in helper
+    int x;
+    x = badReturn();     // Error: badReturn returns bool, x is int
+    
+    return 0;
+}

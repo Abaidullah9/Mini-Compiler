@@ -1,0 +1,15 @@
+int main() {
+    int a = 10;
+    float b = 2.5;
+    bool flag = true;
+    
+    // Testing arithmetic and type promotion
+    a = a + 5;
+    b = b * 2.0;
+    
+    // Testing logical and relational operators
+    if (a > 10 && flag) {
+        output a;
+    }
+    return 0;
+}

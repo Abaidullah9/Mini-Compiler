@@ -1,0 +1,7 @@
+int main() {
+    bool flag;
+    flag = 10.5; // Error: Cannot assign float to bool
+    int x;
+    x = true;    // Error: Cannot assign bool to int
+    return 0;
+}

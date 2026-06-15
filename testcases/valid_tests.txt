@@ -1,0 +1,33 @@
+int calculateScore(int bonus) {
+    int base;
+    base = 100;
+    return base + bonus;
+}
+
+int main() {
+    int sum;
+    int limit;
+    int i;
+    bool isActive;
+    int finalVal;
+
+    sum = 0;
+    limit = 10;
+    i = 0;
+    isActive = true;
+
+    for (i = 0; i < limit; i++) {
+        sum += i;
+    }
+
+    while (sum > 0 && isActive) {
+        sum -= 1;
+        if (sum == 5) {
+            isActive = false;
+        }
+    }
+
+    finalVal = calculateScore(sum);
+    output finalVal;
+    return 0;
+}
